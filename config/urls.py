@@ -24,6 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',TemplateView.as_view(template_name='index.html'), name='home'),
     path('page',TemplateView.as_view(template_name='page1.html'), name='page1'),
+    path('about',TemplateView.as_view(template_name='about.html'),name='about'),
+    path('pricing',TemplateView.as_view(template_name='pricing.html'),name='pricing'),
 ]
 
 if settings.DEBUG:
