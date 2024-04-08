@@ -71,6 +71,7 @@
     </div>
 
     <form method="post"  class="php-email-form p-3 p-md-4">
+      {% csrf_token %}
       <div class="row">
         <div class="col-xl-6 form-group">
           <input
