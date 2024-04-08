@@ -1,19 +1,23 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+{% if messages %}
+{% for message in messages %}
 <script>
     Toastify({
-  text: "This is a toast",
+  text: "{{message}}",
   duration: 3000, // 3sec
-  close: true,
   gravity: "top", // `top` or `bottom`
-  position: "right", // `left`, `center` or `right`
+  position: "center", // `left`, `center` or `right`
   stopOnFocus: true, // Prevents dismissing of toast on hover
   style: {
-    background: "linear-gradient(to right, #00b09b, #96c93d)",
+    background: "linear-gradient(to right, #00b09b, #d54245)",
   },
   offset:{
-    x:10,
-    y:10,
+    x:0,
+    y:20, //distance from top
   }
 }).showToast();
 </script>
+{% endfor%}
+{% endif %}
